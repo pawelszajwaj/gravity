@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=3 uid="uid://bqpgnpkfxk000"]
+
+[ext_resource type="Script" uid="uid://dngpypoltf8nr" path="res://camera.gd" id="1_msjai"]
+[ext_resource type="Script" uid="uid://bsekakq17mj0f" path="res://world.gd" id="1_umalr"]
+[ext_resource type="Script" uid="uid://cnjwfw807pybi" path="res://moons.gd" id="3_r5kly"]
+[ext_resource type="Script" uid="uid://bgqq0dhaac2j0" path="res://time_control.gd" id="4_13wdq"]
+[ext_resource type="Script" uid="uid://wsxuqwnuk4tq" path="res://bodies.gd" id="5_apo6w"]
+[ext_resource type="Script" uid="uid://db3eb3cnhlp0h" path="res://gravity.gd" id="5_gt7os"]
+[ext_resource type="Script" uid="uid://dkaegc537opdi" path="res://hud.gd" id="6_lf05y"]
+
+[sub_resource type="Sky" id="Sky_3ps45"]
+
+[sub_resource type="Environment" id="Environment_3ps45"]
+background_mode = 2
+sky = SubResource("Sky_3ps45")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3ps45")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.8507836, 0, 0.5255162, -0.24988368, 0.87971497, 0.4045488, -0.46230447, -0.4755014, 0.74844706, 25.781265, 25.886353, 69.382355)
+script = ExtResource("1_msjai")
+
+[node name="World" type="Node3D" parent="."]
+script = ExtResource("1_umalr")
+
+[node name="Moons" type="Node3D" parent="World"]
+script = ExtResource("3_r5kly")
+
+[node name="TimeControl" type="Node" parent="World"]
+script = ExtResource("4_13wdq")
+
+[node name="Gravity" type="Node" parent="World"]
+script = ExtResource("5_gt7os")
+
+[node name="Hud" type="CanvasLayer" parent="World"]
+script = ExtResource("6_lf05y")
+
+[node name="Bodies" type="Node3D" parent="World"]
+script = ExtResource("5_apo6w")

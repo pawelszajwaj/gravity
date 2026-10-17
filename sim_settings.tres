@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="SimSettings" load_steps=2 format=3 uid="uid://bidu8cbgdqpa7"]
+
+[ext_resource type="Script" uid="uid://5tpdxuvffyrc" path="res://sim_settings.gd" id="1_g5ko2"]
+
+[resource]
+script = ExtResource("1_g5ko2")
+metadata/_custom_type_script = "uid://5tpdxuvffyrc"

@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dpb6sw4tt5iks"
+
+[deps]
+
+files=["res://data/moons.name.translation", "res://data/moons.label.translation", "res://data/moons.a.translation", "res://data/moons.e.translation", "res://data/moons.omega.translation", "res://data/moons.M.translation", "res://data/moons.inc.translation", "res://data/moons.node.translation", "res://data/moons.radius.translation"]
+
+source_file="res://data/moons.csv"
+dest_files=["res://data/moons.name.translation", "res://data/moons.label.translation", "res://data/moons.a.translation", "res://data/moons.e.translation", "res://data/moons.omega.translation", "res://data/moons.M.translation", "res://data/moons.inc.translation", "res://data/moons.node.translation", "res://data/moons.radius.translation"]
+
+[params]
+
+compress=true
+delimiter=0
